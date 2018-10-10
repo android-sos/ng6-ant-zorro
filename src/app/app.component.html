@@ -45,50 +45,71 @@
           </li>
         </ul>
       </nz-sider>
-      <nz-content style="padding: 0 24px; min-height: 280px;">
-        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>DatePicker</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-date-picker formControlName="datePicker"></nz-date-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>DatePicker[ShowTime]</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-date-picker nzShowTime formControlName="datePickerTime"></nz-date-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>MonthPicker</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-month-picker formControlName="monthPicker"></nz-month-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>RangePicker</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-range-picker formControlName="rangePicker"></nz-range-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>RangePicker[showTime]</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-range-picker nzShowTime formControlName="rangePickerTime"></nz-range-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>TimePicker</nz-form-label>
-            <nz-form-control [nzSm]="16" [nzXs]="24">
-              <nz-time-picker formControlName="timePicker"></nz-time-picker>
-            </nz-form-control>
-          </nz-form-item>
-          <nz-form-item>
-            <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
-              <button nz-button nzType="primary">Submit</button>
-            </nz-form-control>
-          </nz-form-item>
-        </form>
+      <nz-content>
+        <div nz-row>
+          <div nz-col nzSpan="3"></div>
+          <div nz-col nzSpan="9">
+            <nz-steps>
+              <nz-step nzTitle="Login" nzStatus="finish" nzIcon="anticon anticon-user"></nz-step>
+              <nz-step nzTitle="Verification" nzStatus="finish" nzIcon="anticon anticon-solution"></nz-step>
+              <nz-step nzTitle="Pay" nzStatus="process" nzIcon="anticon anticon-spin anticon-loading"></nz-step>
+              <nz-step nzTitle="Done" nzStatus="wait" [nzIcon]="iconTemplate"></nz-step>
+              <ng-template #iconTemplate><i class="anticon anticon-smile-o"></i></ng-template>
+            </nz-steps>
+          </div>
+        </div>
+
+        <div nz-row>
+          <div nz-col nzSpan="3"></div>
+          <div nz-col nzSpan="9">
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>DatePicker</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-date-picker formControlName="datePicker"></nz-date-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>DatePicker[ShowTime]</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-date-picker nzShowTime formControlName="datePickerTime"></nz-date-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>MonthPicker</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-month-picker formControlName="monthPicker"></nz-month-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>RangePicker</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-range-picker formControlName="rangePicker"></nz-range-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>RangePicker[showTime]</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-range-picker nzShowTime formControlName="rangePickerTime"></nz-range-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>TimePicker</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                  <nz-time-picker formControlName="timePicker"></nz-time-picker>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+                  <button nz-button nzType="primary">Submit</button>
+                </nz-form-control>
+              </nz-form-item>
+            </form>
+
+          </div>
+        </div>
+
+        
       
       </nz-content>
     </nz-layout>
