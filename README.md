@@ -1,6 +1,6 @@
 # Ng6AntZorro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+This is a Simple implementation to add Ant-Zorro Components to Angular 6.
 
 ## Development server
 
